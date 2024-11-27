@@ -87,4 +87,10 @@ class DataController extends Controller
             'countGagal'=>$countGagal
         ]);
     }
+
+    public function setLunas($id){
+        $data = Data::findOrFail($id);
+        $data->update(['status'=>'confirmed']);
+        return response()->json(['data'=>$data]);
+    }
 }
