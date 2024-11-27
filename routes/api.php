@@ -9,3 +9,4 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 });
 Route::apiResource('data',DataController::class);
 Route::get('sum',[DataController::class,'sum']);
+Route::post('setlunas/{id}',[DataController::class,'setLunas']);
