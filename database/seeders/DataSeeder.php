@@ -16,7 +16,7 @@ class DataSeeder extends Seeder
     {
         DB::table('data')->insert([
             [
-                'tanggal' => '2023-10-01',
+                'tanggal' => '2024-11-01',
                 'nopol' => 'B 1234 AB',
                 'origin' => 'Jakarta',
                 'destinasi' => 'Bandung',
@@ -25,7 +25,7 @@ class DataSeeder extends Seeder
                 'status' => 'confirmed',
             ],
             [
-                'tanggal' => '2023-10-02',
+                'tanggal' => '2024-11-02',
                 'nopol' => 'B 5678 CD',
                 'origin' => 'Jakarta',
                 'destinasi' => 'Yogyakarta',
@@ -34,16 +34,16 @@ class DataSeeder extends Seeder
                 'status' => 'pending',
             ],
             [
-                'tanggal' => '2023-10-03',
+                'tanggal' => '2024-11-03',
                 'nopol' => 'B 9101 EF',
                 'origin' => 'Jakarta',
                 'destinasi' => 'Surabaya',
                 'uj' => 70000., // Travel allowance for the trip
                 'harga' => 250000,
-                'status' => 'completed',
+                'status' => 'confirmed',
             ],
             [
-                'tanggal' => '2023-10-04',
+                'tanggal' => '2024-11-04',
                 'nopol' => 'B 1121 GH',
                 'origin' => 'Jakarta',
                 'destinasi' => 'Semarang',
@@ -52,7 +52,7 @@ class DataSeeder extends Seeder
                 'status' => 'confirmed',
             ],
             [
-                'tanggal' => '2023-10-05',
+                'tanggal' => '2024-11-05',
                 'nopol' => 'B 3141 IJ',
                 'origin' => 'Jakarta',
                 'destinasi' => 'Medan',

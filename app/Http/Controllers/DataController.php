@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Data; // Assuming you have a Data model
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class DataController extends Controller
 {
@@ -65,10 +66,11 @@ class DataController extends Controller
 
     public function sum()
     {
-        $data = Data::where('status', 'confirmed')->get(); // Fetch data where status is true
-        $countSukses = Data::where('status','confirmed')->count();
-        $countPending = Data::where('status','pending')->count();
-        $countGagal = Data::where('status','canceled')->count();
+        $currentMonthYear = Carbon::now()->format('Y-m'); // "2024-11"
+        $data = Data::whereRaw('DATE_FORMAT(tanggal, "%Y-%m") = ?', [$currentMonthYear])->where('status','confirmed')->get();
+        $countSukses = Data::whereRaw('DATE_FORMAT(tanggal, "%Y-%m") = ?', [$currentMonthYear])->where('status','confirmed')->count();
+        $countPending = Data::whereRaw('DATE_FORMAT(tanggal, "%Y-%m") = ?', [$currentMonthYear])->where('status','pending')->count();
+        $countGagal = Data::whereRaw('DATE_FORMAT(tanggal, "%Y-%m") = ?', [$currentMonthYear])->where('status','canceled')->count();
 
         $marginSum = 0;
 
@@ -80,6 +82,7 @@ class DataController extends Controller
         $untungrugi = $marginSum < 0 ? 'RUGI' : 'UNTUNG';
 
         return response()->json([
+            'monthYear'=>$currentMonthYear,
             'untungrugi' => $untungrugi,
             'marginSum' => $marginSum,
             'countSukses'=>$countSukses,
