@@ -134,6 +134,7 @@ class DataController extends Controller
     }
 
     return response()->json([
+        'status' => 'success',
         'year' => $year,
         'dataByMonth' => $results,
     ]);
