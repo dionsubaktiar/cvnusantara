@@ -101,7 +101,7 @@ class DataController extends Controller
 
         // Query data for the specific month
         $data = Data::whereRaw('DATE_FORMAT(tanggal, "%Y-%m") = ?', [$monthYear])
-                    ->where('status', 'confirmed')
+                    // ->where('status', 'confirmed')
                     ->get();
 
         // Count the different status types for the month
@@ -115,7 +115,7 @@ class DataController extends Controller
         }
 
         // Calculate margin for the month
-        $marginSum = $data->reduce(function ($carry, $item) {
+        $marginSum = $data->where('status','confirmed')->reduce(function ($carry, $item) {
             return $carry + ($item->harga - $item->uj); // Calculate margin (harga - uj)
         }, 0);
 
