@@ -12,7 +12,7 @@ class DataController extends Controller
     public function index()
     {
         // Retrieve all data and group by month
-        $data = Data::whereNotNull('tanggal')->sortBy('tanggal')->get()->groupBy(function ($item) {
+        $data = Data::whereNotNull('tanggal')->orderBy('tanggal')->get()->groupBy(function ($item) {
             return Carbon::parse($item->tanggal)->format('F'); // Group by month name
         });
 
