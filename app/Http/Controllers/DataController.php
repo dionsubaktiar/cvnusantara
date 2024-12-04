@@ -24,6 +24,7 @@ class DataController extends Controller
                 'data' => $items->map(function ($item) {
                     return [
                         'id' => $item->id,
+                        'nopol'=>$item->nopol,
                         'tanggal' => $item->tanggal,
                         'status' => $item->status,
                         'harga' => $item->harga,
