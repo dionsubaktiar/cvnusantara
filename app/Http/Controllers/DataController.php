@@ -54,6 +54,17 @@ class DataController extends Controller
             'status' => 'required|string',
         ]);
 
+        $today = Carbon::today();
+        $check_exist = Data::where('nopol',$request->nopol)
+        ->whereDate('created_at',$today)->exists();
+
+        if($check_exist){
+            return response()->json([
+                'status' => false,
+                'message' => 'This nomor polisi has already been inputted today.',
+            ], 422);
+        }
+
         $data = Data::create($validatedData);
         return response()->json($data, 201);
     }
@@ -141,11 +152,28 @@ class DataController extends Controller
     ]);
 }
 
-
     public function setLunas($id)
     {
         $data = Data::findOrFail($id);
         $data->update(['status' => 'confirmed']);
         return response()->json(['data' => $data]);
+    }
+
+    public function pinVerified(Request $request)
+    {
+        $key = env('PIN_CORRECT');
+
+        if ($request->input('pin') === $key) {
+            $request->session()->put('pin_verified', true);
+            return response()->json(['success' => true], 200);
+        } else {
+            return response()->json(['success' => false, 'message' => 'Invalid PIN'], 401);
+        }
+    }
+
+    public function lockscreen(Request $request)
+    {
+        $request->session()->forget('pin_verified');
+        return response()->json(['success' => true], 200);
     }
 }

@@ -18,3 +18,5 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 Route::apiResource('data',DataController::class);
 Route::get('sum',[DataController::class,'sum']);
 Route::put('setlunas/{id}',[DataController::class,'setLunas']);
+Route::post('/pin-verify', [DataController::class, 'pinVerified']);
+Route::post('/lockscreen', [DataController::class, 'lockscreen']);
