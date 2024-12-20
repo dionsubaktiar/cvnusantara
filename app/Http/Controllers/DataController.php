@@ -161,19 +161,25 @@ class DataController extends Controller
 
     public function pinVerified(Request $request)
     {
-        $key = env('PIN_CORRECT');
+    $key = env('PIN_CORRECT');
 
-        if ($request->input('pin') === $key) {
-            $request->session()->put('pin_verified', true);
-            return response()->json(['success' => true], 200);
-        } else {
-            return response()->json(['success' => false, 'message' => 'Invalid PIN'], 401);
-        }
+    if ($request->input('pin') === $key) {
+        // Generate a verification token
+        $verificationToken = base64_encode('verified_' . now());
+
+        return response()->json([
+            'success' => true,
+            'verification_token' => $verificationToken,
+        ]);
+    } else {
+        return response()->json(['success' => false, 'message' => 'Invalid PIN']);
+    }
     }
 
     public function lockscreen(Request $request)
     {
-        $request->session()->forget('pin_verified');
-        return response()->json(['success' => true], 200);
+    // Invalidate verification on client-side by simply removing the token
+    return response()->json(['success' => true, 'message' => 'Locked']);
     }
+
 }
