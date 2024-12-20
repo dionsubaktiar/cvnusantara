@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id()->autoIncrement();
             $table->date('tanggal'); // Column for 'tanggal'
             $table->string('nopol'); // Column for 'nopol'
+            $table->string('driver')-> nullable();
             $table->string('origin'); // Column for 'origin'
             $table->string('destinasi'); // Column for 'destinasi'
             $table->integer('uj'); // Column for 'uj'

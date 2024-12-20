@@ -14,188 +14,374 @@ class DataSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('data')->insert([
-            [
-                'tanggal' => '2024-11-01',
-                'nopol' => 'B 1234 AB',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Bandung',
-                'uj' => 50000,
-                'harga' => 150000,
-                'status' => 'confirmed',
-            ],
-            [
-                'tanggal' => '2024-11-02',
-                'nopol' => 'B 5678 CD',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Yogyakarta',
-                'uj' => 60000,
-                'harga' => 200000,
-                'status' => 'pending',
-            ],
-            [
-                'tanggal' => '2024-11-03',
-                'nopol' => 'B 9101 EF',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Surabaya',
-                'uj' => 70000,
-                'harga' => 250000,
-                'status' => 'confirmed',
-            ],
-            [
-                'tanggal' => '2024-11-04',
-                'nopol' => 'B 1121 GH',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Semarang',
-                'uj' => 55000,
-                'harga' => 180000,
-                'status' => 'confirmed',
-            ],
-            [
-                'tanggal' => '2024-11-05',
-                'nopol' => 'B 3141 IJ',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Medan',
-                'uj' => 80000,
-                'harga' => 300000,
-                'status' => 'canceled',
-            ],
-            [
-                'tanggal' => '2024-11-06',
-                'nopol' => 'B 4132 KL',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Malang',
-                'uj' => 60000,
-                'harga' => 220000,
-                'status' => 'pending',
-            ],
-            [
-                'tanggal' => '2024-11-07',
-                'nopol' => 'B 5161 MN',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Solo',
-                'uj' => 45000,
-                'harga' => 170000,
-                'status' => 'confirmed',
-            ],
-            [
-                'tanggal' => '2024-11-08',
-                'nopol' => 'B 6172 OP',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Bali',
-                'uj' => 100000,
-                'harga' => 500000,
-                'status' => 'confirmed',
-            ],
-            [
-                'tanggal' => '2024-11-09',
-                'nopol' => 'B 7183 QR',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Bandung',
-                'uj' => 50000,
-                'harga' => 150000,
-                'status' => 'confirmed',
-            ],
-            [
-                'tanggal' => '2024-11-10',
-                'nopol' => 'B 8194 ST',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Cirebon',
-                'uj' => 40000,
-                'harga' => 130000,
-                'status' => 'pending',
-            ],
-            [
-                'tanggal' => '2024-11-11',
-                'nopol' => 'B 9205 UV',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Bogor',
-                'uj' => 30000,
-                'harga' => 90000,
-                'status' => 'confirmed',
-            ],
-            [
-                'tanggal' => '2024-11-12',
-                'nopol' => 'B 0216 WX',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Pekanbaru',
-                'uj' => 90000,
-                'harga' => 400000,
-                'status' => 'canceled',
-            ],
-            [
-                'tanggal' => '2024-11-13',
-                'nopol' => 'B 1227 YZ',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Banjarmasin',
-                'uj' => 120000,
-                'harga' => 550000,
-                'status' => 'confirmed',
-            ],
-            [
-                'tanggal' => '2024-11-14',
-                'nopol' => 'B 2238 AB',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Makassar',
-                'uj' => 140000,
-                'harga' => 600000,
-                'status' => 'pending',
-            ],
-            [
-                'tanggal' => '2024-11-15',
-                'nopol' => 'B 3249 CD',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Manado',
-                'uj' => 160000,
-                'harga' => 700000,
-                'status' => 'confirmed',
-            ],
-            [
-                'tanggal' => '2024-11-16',
-                'nopol' => 'B 4250 EF',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Palembang',
-                'uj' => 80000,
-                'harga' => 250000,
-                'status' => 'canceled',
-            ],
-            [
-                'tanggal' => '2024-11-17',
-                'nopol' => 'B 5261 GH',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Batam',
-                'uj' => 110000,
-                'harga' => 350000,
-                'status' => 'pending',
-            ],
-            [
-                'tanggal' => '2024-11-18',
-                'nopol' => 'B 6272 IJ',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Lampung',
-                'uj' => 70000,
-                'harga' => 190000,
-                'status' => 'confirmed',
-            ],
-            [
-                'tanggal' => '2024-11-19',
-                'nopol' => 'B 7283 KL',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Medan',
-                'uj' => 90000,
-                'harga' => 300000,
-                'status' => 'confirmed',
-            ],
-            [
-                'tanggal' => '2024-11-20',
-                'nopol' => 'B 8294 MN',
-                'origin' => 'Jakarta',
-                'destinasi' => 'Aceh',
-                'uj' => 150000,
-                'harga' => 700000,
-                'status' => 'pending',
-            ],
-        ]);
-
+        $jsondata = '[
+    {
+        "tanggal": "2024-12-17",
+        "nopol": "B 9785 KRU",
+        "driver": null,
+        "origin": "Manohara Surabaya",
+        "destinasi": "Fb mm kranggan",
+        "uj": "4200000",
+        "harga": "5500000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-17",
+        "nopol": "D 9212 VG",
+        "driver": "Rijal",
+        "origin": "Manohara",
+        "destinasi": "IDM - DC VISITA JAKARTA",
+        "uj": "2100000",
+        "harga": "2950000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-17",
+        "nopol": "B 9277 YU",
+        "driver": "Gab.Rijal",
+        "origin": "Manohara Surabaya",
+        "destinasi": "IDM - DC TPIL JAKARTA",
+        "uj": "1400000",
+        "harga": "2950000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-17",
+        "nopol": "L 8800 UN",
+        "driver": "IWAN",
+        "origin": "Rusa mas Surabaya",
+        "destinasi": "Semarang",
+        "uj": "1500009",
+        "harga": "3575000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-17",
+        "nopol": "L 8190 CAA",
+        "driver": "Yuli",
+        "origin": "Kantor Surabaya",
+        "destinasi": "Gud SMG, Nipon,",
+        "uj": "1200000",
+        "harga": "2955000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-17",
+        "nopol": "H 9247 OV",
+        "driver": "Blangkon",
+        "origin": "Gud Surabaya",
+        "destinasi": "S3 2, Yogya 2, solo 2",
+        "uj": "1600000",
+        "harga": "3180000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-17",
+        "nopol": "D 8509 DE",
+        "driver": null,
+        "origin": "Gud Surabaya",
+        "destinasi": "SMG 2",
+        "uj": "1700000",
+        "harga": "2860000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-18",
+        "nopol": "B 9099 CT",
+        "driver": "Isnan",
+        "origin": "Gud Surabaya",
+        "destinasi": "Solo 3, S3 ,Klaten, yogya",
+        "uj": "1525000",
+        "harga": "2237000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-18",
+        "nopol": "L 8345 CAA",
+        "driver": "Imron",
+        "origin": "Gud Surabaya",
+        "destinasi": "Boyolali, Semarang",
+        "uj": "1150000",
+        "harga": "2697000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-18",
+        "nopol": "L 9358 CR",
+        "driver": "Saed",
+        "origin": "Jnt Semarang",
+        "destinasi": "Surabaya",
+        "uj": "950000",
+        "harga": "1800000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-17",
+        "nopol": "L 9355 CR",
+        "driver": "Wahyu M",
+        "origin": "Jakarta Rusa mas",
+        "destinasi": "Am tour yogya",
+        "uj": "1400000",
+        "harga": "3200000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-18",
+        "nopol": "L 9359 CR",
+        "driver": "Maryadi",
+        "origin": "Surabaya",
+        "destinasi": "Solo 2",
+        "uj": "1050000",
+        "harga": "2170000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-18",
+        "nopol": "L 9357 CR",
+        "driver": "Aziz",
+        "origin": "Sidoarjo",
+        "destinasi": "Solo",
+        "uj": "1100000",
+        "harga": "2000000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-17",
+        "nopol": "L 8171 CAA",
+        "driver": "Sahili",
+        "origin": "Semarang",
+        "destinasi": "Jombang",
+        "uj": "800000",
+        "harga": "1600000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-18",
+        "nopol": "L 8369 CAA",
+        "driver": "Hermansyah",
+        "origin": "Manohara",
+        "destinasi": "Daan mogot",
+        "uj": "2100000",
+        "harga": "3750000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-18",
+        "nopol": "L 7963 NN",
+        "driver": "Mbah joko",
+        "origin": "Manohara+ kantor",
+        "destinasi": "Kudus, Jepara , Semarang",
+        "uj": "1300009",
+        "harga": "3191000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-18",
+        "nopol": "L 8370 CAA",
+        "driver": "Andik",
+        "origin": "Manohara+ kantor",
+        "destinasi": "Jkt2 ,Tegal ,pkl",
+        "uj": "2300000",
+        "harga": "4050000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-17",
+        "nopol": "L 7963 NN",
+        "driver": "Mbak joko",
+        "origin": "Salatiga Pak Untung",
+        "destinasi": "Surabaya",
+        "uj": "800000",
+        "harga": "1565000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-17",
+        "nopol": "L 8190 CAA",
+        "driver": "Yuli",
+        "origin": "Jnt Semarang",
+        "destinasi": "Surabaya",
+        "uj": "950000",
+        "harga": "1800000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-18",
+        "nopol": "L 8170 CAA",
+        "driver": "Piyek",
+        "origin": "Suparma Ambon krian",
+        "destinasi": "Solo",
+        "uj": "950000",
+        "harga": "1500000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-18",
+        "nopol": "B 9273 UW",
+        "driver": "Asep/Hari",
+        "origin": "Manohara",
+        "destinasi": "Fb Mm Bandung",
+        "uj": "2600000",
+        "harga": "3400000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-18",
+        "nopol": "B 9610 RX",
+        "driver": "Narpiah/ Hari",
+        "origin": "Manohara",
+        "destinasi": "Fb Mm Kranggan",
+        "uj": "3600000",
+        "harga": "4350000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-19",
+        "nopol": "L 9358 CR",
+        "driver": "Saed",
+        "origin": "Tongya Ambon",
+        "destinasi": "Blitar",
+        "uj": "800000",
+        "harga": "1300000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-19",
+        "nopol": "L 8171 CAA",
+        "driver": null,
+        "origin": "Tongya Ambon",
+        "destinasi": "Kediri",
+        "uj": "600000",
+        "harga": "1100000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-19",
+        "nopol": "L 8170 CAA",
+        "driver": "Piyek",
+        "origin": "Solo Arie",
+        "destinasi": "Ajinomoto Mjkt",
+        "uj": "650000",
+        "harga": "1300000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-19",
+        "nopol": "L 9359 CR",
+        "driver": "Maryadi",
+        "origin": "Semarang Miftah",
+        "destinasi": "Surabaya Margomulyo",
+        "uj": "850000",
+        "harga": "1400000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-19",
+        "nopol": "L 9355 CR",
+        "driver": "Wahyu M",
+        "origin": "Solo Pandawa",
+        "destinasi": "Malang",
+        "uj": "950000",
+        "harga": "1550000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-19",
+        "nopol": "L 8370 CAA",
+        "driver": "Andik / Suriyanto",
+        "origin": "Victoria Juna",
+        "destinasi": "Surabaya",
+        "uj": "700000",
+        "harga": "1500000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-19",
+        "nopol": "B 9641 FXV",
+        "driver": "Andi / Hari",
+        "origin": "Manohara",
+        "destinasi": "Mad Bandung",
+        "uj": "2200000",
+        "harga": "2850000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-19",
+        "nopol": "L 9305 CE",
+        "driver": "Narko ( backup )",
+        "origin": "Manohara",
+        "destinasi": "Idm Bandung+ Idm Cirebon",
+        "uj": "400000",
+        "harga": "3300000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-19",
+        "nopol": "L 9305 CE",
+        "driver": "Narko",
+        "origin": "Kantor Wigas",
+        "destinasi": "Yogya",
+        "uj": "1425000",
+        "harga": "2600000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-19",
+        "nopol": "B 9021 URO",
+        "driver": "Rusli / Hari",
+        "origin": "Manohara",
+        "destinasi": "Fb Mm + Indogrosir Sukabumi",
+        "uj": "2300000",
+        "harga": "3050000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-19",
+        "nopol": "B 9177 CXR",
+        "driver": "Wendy",
+        "origin": "Kantor Surabaya",
+        "destinasi": "Cirebon+ Kuningan",
+        "uj": "800000",
+        "harga": "1700000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-19",
+        "nopol": "L 8800 UN",
+        "driver": "Iwan",
+        "origin": "Kantor Surabaya",
+        "destinasi": "Rembang , Semarang, S3",
+        "uj": "1350000",
+        "harga": "2629000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-19",
+        "nopol": "L 9356 CR",
+        "driver": "Heri Sendek",
+        "origin": "Manohara+ kantor",
+        "destinasi": "Karanganyar,solo,Klaten,yogya2",
+        "uj": "1400000",
+        "harga": "4400000",
+        "status": "confirmed"
+    },
+    {
+        "tanggal": "2024-12-19",
+        "nopol": "L 8190 CAA",
+        "driver": "Yuli",
+        "origin": "Jnt Semarang",
+        "destinasi": "Surabaya",
+        "uj": "950000",
+        "harga": "1800000",
+        "status": "confirmed"
     }
+]';
+        $data = json_decode($jsondata,true);
+            foreach ($data as $entry) {
+                DB::table('data')->insert($entry);
+            }
+
+        }
+
+
 }

@@ -25,6 +25,7 @@ class DataController extends Controller
                     return [
                         'id' => $item->id,
                         'nopol'=>$item->nopol,
+                        'driver'=>$item->driver,
                         'tanggal' => $item->tanggal,
                         'status' => $item->status,
                         'harga' => $item->harga,
@@ -47,6 +48,7 @@ class DataController extends Controller
         $validatedData = $request->validate([
             'tanggal' => 'required|date',
             'nopol' => 'required|string',
+            'driver'=>'string',
             'origin' => 'required|string',
             'destinasi' => 'required|string',
             'uj' => 'required|numeric',
@@ -83,6 +85,7 @@ class DataController extends Controller
         $validatedData = $request->validate([
             'tanggal' => 'sometimes|required|date',
             'nopol' => 'sometimes|required|string',
+            'driver'=> 'sometimes|string',
             'origin' => 'sometimes|required|string',
             'destinasi' => 'sometimes|required|string',
             'uj' => 'sometimes|required|numeric',
