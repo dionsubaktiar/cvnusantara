@@ -56,9 +56,9 @@ class DataController extends Controller
             'status' => 'required|string',
         ]);
 
-        $today = Carbon::today();
+        $today = Carbon::today()->toDateString();
         $check_exist = Data::where('nopol',$request->nopol)
-        ->whereDate('created_at',$today)->exists();
+        ->whereDate('tanggal',$today)->exists();
 
         if($check_exist){
             return response()->json([

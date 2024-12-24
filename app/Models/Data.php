@@ -11,6 +11,7 @@ class Data extends Model
     protected $fillable = [
         'tanggal',
         'nopol',
+        'driver',
         'origin',
         'destinasi',
         'uj',
